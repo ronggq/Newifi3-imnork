@@ -77,7 +77,7 @@ jobs:
     - name: Download package
       id: package
       run: |
-        make download -j8
+        make V=s -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
         make V=s -j2
